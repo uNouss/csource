@@ -1,0 +1,13 @@
+Angers 47 28 25 Nord 0 33 15 Ouest
+Bordeaux 44 50 19 Nord 0 34 42 Ouest
+Caen 49 10 59 Nord 0 22 10 Ouest
+Lille 50 38 12 Nord 3 3 48 Est
+Calais 50 56 53 Nord 1 51 23 Est
+Lyon 45 45 35 Nord 4 50 32 Est
+Marseille 43 17 51 Nord 5 22 38 Est
+Nantes 47 13 05 Nord 1 33 10 Ouest
+Nice 43 42 12 Nord 7 15 59 Est
+Paris 48 51 24 Nord 2 21 7 Est
+Rennes 48 6 53 Nord 1 40 46 Ouest
+Strasbourg 48 35 04 Nord 7 44 55 Est
+Toulouse 43 36 16 Nord 1 26 39 Est
