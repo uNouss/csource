@@ -43,7 +43,8 @@ double distance_itineraire(vext self){
   return d + disterre_distance(v_courant->position, v_depart->position);
 }
 
-void permutation(vext itineraire, vext tourne_optimal){
+unsigned int permutation(vext itineraire, vext tourne_optimal){
+  unsigned int nb_permutation = 1; // pour prendre en compte la première permutation
 	int nb_element = vext_nombre_d_elements(itineraire);
 	register unsigned int i;
 	unsigned int indexes[nb_element];
@@ -63,11 +64,13 @@ void permutation(vext itineraire, vext tourne_optimal){
       }
 			indexes[i]++;
 			i = 0;
+      nb_permutation++;
 		} else {
 			indexes[i] = 0;
 			i++;
 		}
 	}
+  return nb_permutation;
 }
 
 void

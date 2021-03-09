@@ -17,7 +17,7 @@ CPPFLAGS= -I$(INCDIR)
 LDFLAGS= -L$(LIBDIR)
 
 #les librairies utilisees
-LDLIBS= -lvext -lbcb -ldisterre -lm -lutil -litoa
+LDLIBS= -lvext -lbcb -ldisterre -lm -lutil
 
 #la librairie a construire
 LIBFILENAME= 
