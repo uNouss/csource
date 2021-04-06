@@ -5,10 +5,10 @@
 #include <stdio.h>
 
 int main(int argc , char **argv){
-  if(argc !=2 ){
-    fprintf(stderr,"Usage:<%s> \"phrase a fragmenter en mot\"(entre quote!!)\n",argv[0]);
-    exit(EXIT_FAILURE);
-  }
+  // if(argc !=2 ){
+  //   fprintf(stderr,"Usage:<%s> \"phrase a fragmenter en mot\"(entre quote!!)\n",argv[0]);
+  //   exit(EXIT_FAILURE);
+  // }
   char phrase[] = "une phrase a fragmenter en sept mots";
   char **tab = memoire_allouer(7*sizeof(char *));
   fragmenter_chaine(phrase,tab, 7);

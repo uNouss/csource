@@ -8,9 +8,9 @@
 #include "pvc.h"
 
 
-static unsigned int factorielle(int n){
-  return n <= 0 ? 1: n * factorielle(n-1);
-}
+// static unsigned int factorielle(int n){
+//   return n <= 0 ? 1: n * factorielle(n-1);
+// }
 
 int main(void){
   // memoire_trace(true);
@@ -94,10 +94,10 @@ int main(void){
   unsigned int nb_ville = vext_nombre_d_elements(itineraire);
 
 
-  double mesure_temps[nb_ville-3];
-  unsigned int mesure_memoire[nb_ville-3];
-  clock_t start, end;
-  printf("nb_ville,temps,memoire,factorielle\n");
+  // double mesure_temps[nb_ville-3];
+  // unsigned int mesure_memoire[nb_ville-3];
+  // clock_t start, end;
+  // printf("nb_ville,temps,memoire,factorielle\n");
   for(unsigned int i = 3; i <= nb_ville; i++){
     tourne_otpimal = vext_creer();
     s_itineraire = vext_creer();
@@ -107,14 +107,14 @@ int main(void){
 
     vext_copier(s_itineraire, tourne_otpimal);
     vext_definir_affichage(tourne_otpimal, afficher_ville);
-    start = clock(); 
-    mesure_memoire[i-3] = permutation(s_itineraire, tourne_otpimal);
-    end = clock();
-    mesure_temps[i-3] = ((double)(end - start));
-    printf("%d,%f,%d,%d\n", i, mesure_temps[i-3], mesure_memoire[i-3], factorielle(i));
-    // double d_min = distance_itineraire(tourne_otpimal);
-    // printf("Voici un parcours minimal de longueur %g : \n",d_min);
-    // vext_afficher(tourne_otpimal);
+    // start = clock(); 
+    /*mesure_memoire[i-3] =*/ permutation(s_itineraire, tourne_otpimal);
+    // end = clock();
+    // mesure_temps[i-3] = ((double)(end - start));
+    //printf("%d,%f,%d,%d\n", i, mesure_temps[i-3], mesure_memoire[i-3], factorielle(i));
+    double d_min = distance_itineraire(tourne_otpimal);
+    printf("Voici un parcours minimal de longueur %g : \n",d_min);
+    vext_afficher(tourne_otpimal);
     vext_liberer(s_itineraire);
     vext_liberer(tourne_otpimal);
   }
